@@ -1,0 +1,14 @@
+{% autoescape off %}
+<h1>Hello</h1>
+<title>{% block title %}Django Email{% endblock %}</title>
+<ol>
+	<li>Coffee</li>
+	<li>Tea</li>
+	<li>Milk</li>
+</ol>
+<label for="male">Male</label>
+<p>This is some text in a paragraph.</p>
+Hi {{ user.username }},
+Please click on the link to confirm your registration,
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+{% endautoescape %}
